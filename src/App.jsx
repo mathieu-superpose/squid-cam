@@ -50,7 +50,7 @@ export default function App() {
   return (
     <div className="App">
       <header>
-        <Webcam className="webcam" ref={webcamRef} />
+        <Webcam className="webcam" ref={webcamRef} mirrored />
         <canvas className="canvas" ref={canvasRef} />
       </header>
     </div>

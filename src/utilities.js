@@ -12,6 +12,7 @@ export const drawHand = (predictions, ctx) => {
   // Check if we have predictions
   if (!predictions?.length) return;
 
+  const canvasWidth = ctx.canvas.width;
   // Loop through each prediction
   predictions.forEach((prediction) => {
     // Grab landmarks
@@ -24,7 +25,7 @@ export const drawHand = (predictions, ctx) => {
 
       // start drawing
       ctx.beginPath();
-      ctx.arc(x, y, 5, 0, 3 * Math.PI);
+      ctx.arc(canvasWidth - x, y, 5, 0, 3 * Math.PI);
 
       // stop drawing
       ctx.fillStyle = "indigo";
